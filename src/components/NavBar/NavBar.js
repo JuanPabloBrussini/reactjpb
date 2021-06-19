@@ -1,60 +1,49 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import logo from "./logocuponp.jpeg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CartWidget from "../CartWidget/CartWidget";
 
 function NavBar(props) {
   return (
     <div className="App">
-      <Navbar bg="light" expand="lg">
-        <CartWidget/>
+      <Navbar bg="white" expand="lg">
+      <Nav.Link href="#"><img src={logo} alt='logo empresa' width='100%'/></Nav.Link>  
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <NavDropdown title="Tecnologia" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#celulares">Celulares</NavDropdown.Item>
-              <NavDropdown.Item href="#notebooks">Notebooks/PC</NavDropdown.Item>
-              <NavDropdown.Item href="#gadgets">Gadgets</NavDropdown.Item>
+          <Nav.Link href="#">Inicio</Nav.Link>
+          <Nav.Link href="#">Quienes Somos</Nav.Link>
+           <Nav.Link href="#">Gastronomia</Nav.Link>
+            <Nav.Link href="#">Cuidado Personal</Nav.Link>
+              <NavDropdown title="Moda" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#">Hombre</NavDropdown.Item>
+              <NavDropdown.Item href="#">Mujer</NavDropdown.Item>
+              <NavDropdown.Item href="#">Niños</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Hogar" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#tvs">TV's</NavDropdown.Item>
-              <NavDropdown.Item href="#sonido">Sonido</NavDropdown.Item>
-              <NavDropdown.Item href="#muebles">Muebles</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#hogarinteligente">Hogar Inteligente</NavDropdown.Item>
+            <NavDropdown title="Hogar-Deco" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#">Muebles</NavDropdown.Item>
+              <NavDropdown.Item href="#">Electrodomésticos</NavDropdown.Item>
+              <NavDropdown.Item href="#">Bicicletas</NavDropdown.Item>
+
             </NavDropdown>
-            <NavDropdown title="Vehiculos" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#accesorios">Accesorios</NavDropdown.Item>
-              <NavDropdown.Item href="#cubiertas">Cubiertas</NavDropdown.Item>
-              <NavDropdown.Item href="#repuestos">Repuestos</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#ofertasvehiculos">Ofertas Especiales
-              </NavDropdown.Item>
+            <NavDropdown title="Servicios" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#">Cuidado Personal</NavDropdown.Item>
+              <NavDropdown.Item href="#">Hogar</NavDropdown.Item>
+              <NavDropdown.Item href="#">Profesionales</NavDropdown.Item>
+              <NavDropdown.Item href="#">Mecanicos</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Juguetes" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#juguetesninios">Niños</NavDropdown.Item>
-              <NavDropdown.Item href="#juguetesninias">Niñas</NavDropdown.Item>
-              <NavDropdown.Item href="#juguetesconsolas">Consolas</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#ofertasjuegos">Juegos en ofertas</NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Aire Libre" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#bicicletas">Bicicletas</NavDropdown.Item>
-              <NavDropdown.Item href="Camping">Camping</NavDropdown.Item>
-            </NavDropdown>            
-            <Nav.Link href="#quienesomos">Quienes Somos?</Nav.Link>
-          </Nav>          
+            <NavDropdown title="Mas" id="basic-nav-dropdown">
+              <NavDropdown.Item href="">Panaderias</NavDropdown.Item>
+              <NavDropdown.Item href="">Delivery</NavDropdown.Item>
+            </NavDropdown>     
+            <Nav.Link href="#">Contacto</Nav.Link>      
+            <Nav.Link href="#"><CartWidget/></Nav.Link>          
+        
+            </Nav>          
         </Navbar.Collapse>
       </Navbar>
     </div>
   );
 }
-
-//<Nav.Link href="#home">Tecnologia</Nav.Link>
-//<Nav.Link href="#link">Hogar</Nav.Link>
-//<div className='header'>
-// <h1>{props.title}</h1>
-//<h2>{props.subtitle}</h2>
-//<img  src={img} alt='logo empresa' width='5%'/>
-//</div>
 export default NavBar;

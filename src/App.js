@@ -9,9 +9,8 @@ function App() {
   return (
     <>
       <NavBar />
-      <h2>Las ofertas de la semana</h2>
       <div className="App-container">      
-      <ItemListContainer title={"Bienvenido a:"} subtitle={"SMART COMMERCE"}/>
+      <ItemListContainer title={"Bienvenidos a"} subtitle={"Global Cupon"}/>
       </div>
     </>
     
